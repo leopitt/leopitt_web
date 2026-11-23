@@ -1,0 +1,110 @@
+:root {
+  color-scheme: light;
+  color: #1d1d1b;
+  background: #fff;
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+header,
+footer {
+  padding: 1rem 0;
+}
+
+header {
+  border-bottom: 1px solid #bcd;
+}
+
+footer {
+  border-top: 1px solid #bcd;
+  margin-top: 2rem;
+}
+
+main {
+  padding: 1rem 0;
+}
+
+h1,
+h2 {
+  color: #85231e;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 5vw, 2.4rem);
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 1.8rem;
+}
+
+a {
+  color: #85231e;
+  text-underline-offset: .15em;
+  overflow-wrap: anywhere;
+}
+
+a:hover {
+  text-decoration-thickness: .15em;
+}
+
+a:focus-visible {
+  outline: 3px solid #1d1d1b;
+  outline-offset: 4px;
+}
+
+.updated {
+  color: #555;
+  font-size: .9rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+[aria-current='page'] {
+  font-weight: bold;
+}
+
+.skip-link {
+  position: absolute;
+  left: -10000px;
+}
+
+.skip-link:focus {
+  position: static;
+  display: inline-block;
+  padding: .5rem;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+  }
+
+  .skip-link,
+  nav {
+    display: none;
+  }
+}
